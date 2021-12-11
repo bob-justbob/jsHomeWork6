@@ -46,15 +46,34 @@ btn1.addEventListener('click', function(event){
 
 btn2.addEventListener('click', function(event){
 
-    asnc2('https://reqres.in/api/products/3')
+    asnc('https://fakerapi.it/api/v1/persons?_quantity=1&_gender=male&_birthday_start=2005-01-01')
     .then(respon => {
 
         const ul = document.querySelector('#ul2');
         ul2.textContent = "";
         respon.data.forEach(item =>{
             const li = document.createElement('li')
-            li.textContent = item.year;
+            li.textContent = item.firstname;
             ul2.appendChild(li)
+          
+           
+        })
+        
+    })
+    .catch(err => console.log('error', err));
+})
+
+btn3.addEventListener('click', function(event){
+
+    asnc('https://fakerapi.it/api/v1/images?_quantity=1&_type=kittens&_height=300')
+    .then(respon => {
+
+        const ul = document.querySelector('#ul2');
+        ul3.textContent = "";
+        respon.data.forEach(item =>{
+            const li = document.createElement('li')
+            li.textContent = item.title;
+            ul3.appendChild(li)
           
            
         })
