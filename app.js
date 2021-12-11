@@ -46,7 +46,7 @@ btn1.addEventListener('click', function(event){
 
 btn2.addEventListener('click', function(event){
 
-    asnc('https://fakerapi.it/api/v1/persons?_quantity=1&_gender=male&_birthday_start=2005-01-01')
+    asnc('https://fakerapi.it/api/v1/persons?_quantity=5&_gender=male&_birthday_start=2005-01-01')
     .then(respon => {
 
         const ul = document.querySelector('#ul2');
@@ -65,7 +65,7 @@ btn2.addEventListener('click', function(event){
 
 btn3.addEventListener('click', function(event){
 
-    asnc('https://fakerapi.it/api/v1/images?_quantity=1&_type=kittens&_height=300')
+    asnc('https://fakerapi.it/api/v1/images?_quantity=5&_type=kittens&_height=300')
     .then(respon => {
 
         const ul = document.querySelector('#ul2');
